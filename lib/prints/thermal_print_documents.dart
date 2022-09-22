@@ -1,6 +1,6 @@
 import 'package:esc_pos_printer/esc_pos_printer.dart';
 import 'package:esc_pos_utils/esc_pos_utils.dart';
-import 'package:thermal_print/prints/helper/esc_pos_print.dart';
+import 'package:thermal_print/helper/esc_pos_print.dart';
 import '../models/print_column.dart';
 import '../models/receipt_model.dart';
 

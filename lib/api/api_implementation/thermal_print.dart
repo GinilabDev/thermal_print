@@ -1,11 +1,11 @@
 import 'package:esc_pos_printer/esc_pos_printer.dart';
 import 'package:esc_pos_utils/esc_pos_utils.dart';
 import 'package:flutter/material.dart';
-import 'package:thermal_print/prints/print_api.dart';
-import 'package:thermal_print/prints/print_model.dart';
+import 'package:thermal_print/api/print_api.dart';
+import 'package:thermal_print/models/print_model.dart';
 import 'package:thermal_print/prints/thermal_print_documents.dart';
-import '../models/printer_model.dart';
-import '../models/receipt_model.dart';
+import '../../models/printer_model.dart';
+import '../../models/receipt_model.dart';
 
 class ThermalPrint with ThermalPrintDocuments implements PrintApi {
   NetworkPrinter? _printer;

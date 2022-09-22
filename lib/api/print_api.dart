@@ -1,7 +1,7 @@
 library thermal_print;
 
 import 'package:flutter/cupertino.dart';
-import 'package:thermal_print/prints/print_model.dart';
+import 'package:thermal_print/models/print_model.dart';
 import '../models/printer_model.dart';
 
 abstract class PrintApi {

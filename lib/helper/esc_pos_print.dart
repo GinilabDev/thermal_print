@@ -1,10 +1,10 @@
 import 'package:esc_pos_printer/esc_pos_printer.dart';
 import 'package:esc_pos_utils/esc_pos_utils.dart';
 
-import '../../enums/print_font_size.dart';
-import '../../models/PrintItemText.dart';
-import '../../models/printFooter.dart';
-import '../../models/print_column.dart';
+import '../enums/print_font_size.dart';
+import '../models/PrintItemText.dart';
+import '../models/printFooter.dart';
+import '../models/print_column.dart';
 
 class EscPosPrint {
   late NetworkPrinter printer;

@@ -1,6 +1,6 @@
 import 'package:thermal_print/models/PrintItemText.dart';
 import 'package:thermal_print/models/printFooter.dart';
-import 'package:thermal_print/prints/print_model.dart';
+import 'package:thermal_print/models/print_model.dart';
 
 class ReceiptModel extends PrintModel {
   String restaurantName;
@@ -35,7 +35,7 @@ class ReceiptModel extends PrintModel {
         footer = footer ?? [];
 
   static ReceiptModel demo() => ReceiptModel(
-        restaurantName: "Rio Pizza",
+        restaurantName: "Cafe india",
         totalAmount: 65.65,
         address: "1 Saint Marks Road, SR4 7ED",
         mobile: "01915671010",
