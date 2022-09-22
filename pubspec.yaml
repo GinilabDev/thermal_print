@@ -1,5 +1,5 @@
 name: thermal_print
-description: A new Flutter package project.
+description: A flutter package which will help to print from thermal printer.
 version: 0.0.2
 homepage:
 
