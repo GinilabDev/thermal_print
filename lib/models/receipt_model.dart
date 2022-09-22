@@ -35,7 +35,7 @@ class ReceiptModel extends PrintModel {
         footer = footer ?? [];
 
   static ReceiptModel demo() => ReceiptModel(
-        restaurantName: "Cafe india",
+        restaurantName: "Cafe india 3",
         totalAmount: 65.65,
         address: "1 Saint Marks Road, SR4 7ED",
         mobile: "01915671010",
