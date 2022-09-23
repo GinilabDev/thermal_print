@@ -1,3 +1,4 @@
+
 import 'package:esc_pos_printer/esc_pos_printer.dart';
 import 'package:esc_pos_utils/esc_pos_utils.dart';
 import 'package:thermal_print/helper/esc_pos_print.dart';
@@ -23,27 +24,32 @@ mixin ThermalPrintDocuments {
     // Customer Info
     pos.printText(receipt.customerName);
     pos.printText(receipt.deliveryAddress);
-    printer.hr();
+    printer.hr(ch: '=');
 
     // Items
+    int i = 0;
     for (var item in receipt.items) {
+      i = i + 1;
       pos.printItem(item, styles: pos.itemStyle);
-      printer.hr();
+
+      if(i == receipt.items.length){
+           printer.hr(ch: '=');
+      }else{
+          printer.hr();
+      }
     }
-    printer.hr();
 
     // Footer like discount etc.
     for (var footer in receipt.footer) {
       pos.printFooter(footer, styles: pos.footerStyle);
     }
-    printer.hr();
-    printer.hr();
+    printer.hr(ch: '=');
 
     // Total
     pos.makeRow(
       [
-        PrintColumn(width: 2, text: receipt.printTime, align: PosAlign.center),
-        PrintColumn(width: 7, text: "TOTAL", align: PosAlign.left),
+        PrintColumn(width: 3, text: receipt.printTime, align: PosAlign.left),
+        PrintColumn(width: 6, text: "TOTAL", align: PosAlign.center),
         PrintColumn(
             width: 3,
             text: receipt.totalAmount.toStringAsFixed(2),
@@ -65,5 +71,8 @@ mixin ThermalPrintDocuments {
     pos.printText(receipt.note, styles: pos.lastFooterStyle);
     printer.hr();
     pos.printText("Thank you", styles: pos.lastFooterStyle);
+
+    pos.printer.emptyLines(2);
+    pos.printer.cut();
   }
 }
